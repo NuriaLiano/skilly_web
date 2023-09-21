@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+#video-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+#video-container video{
+    width: 100%;
+    height: 100%;
+    filter: blur(3px);
+    object-fit: cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+#initial-text{
+    position: absolute;
+    width: 90%;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1%;
+    border-radius: 15px;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+#logo{
+    width: 30%;
+}
+
+#text-explain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+#text-explain p{
+    margin-bottom: 2%;
+}
+
+#text-explain a{
+    display: inline-block;
+}
+#text-explain img{
+    width: 50%;
+}
+#contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    font-size: 40px;
+}
+#email:hover{
+    color: #7AC943;
+}

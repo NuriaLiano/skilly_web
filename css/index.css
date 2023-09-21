@@ -1,0 +1,103 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+:root{
+    --skilly-green: #7AC943;
+}
+
+header{
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    /* height: 100px; */
+}
+.logo-container, .menu-container, .contact-menu-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-container{
+    width: 15%;
+}
+.logo-container a{
+    display: inline-block;
+}
+.logo-container img{
+    width: 100%;
+}
+.menu-container{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menulist li{
+    position: relative;
+}
+.menulist li::after {
+    
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px; /* Grosor de la barra */
+    background-color: var(--skilly-green); /* Color de la barra */
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    transition: width 0.3s ease-in-out; /* Transición suave de la anchura */
+}
+
+.menulist li:hover::after {
+    width: 98%; /* Ancho de la barra al pasar el cursor */
+}
+.contact-menu-container{
+    margin-left: auto;
+    width: 25%;
+}
+
+.header-list{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+.header-icon{
+    width: 25%;
+    display: flex;
+    gap: 20%;
+}
+.header-icon a{
+    display: inline-block;
+}
+.header-icon img{
+    width: 100%;
+}
+#button-probar{
+    display: flex;
+    align-items: center;
+    background-color: var(--skilly-green);
+    border-radius: 15px;
+    width: fit-content;
+    height: 50px;
+    padding: 5px;
+    border: 2px solid transparent; /* Borde inicialmente transparente */
+    transition: box-shadow 0.3s ease-in-out; /* Agregar transición para suavizar el cambio */
+    box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.75);
+    font-weight: bold;
+}
+#button-probar:hover{
+    box-shadow: 0px 0px 16px 4px #93ef51;
+}
