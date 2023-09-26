@@ -4,6 +4,8 @@ body{
     padding: 0;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 16px;
@@ -43,6 +45,7 @@ header{
 }
 .menulist li{
     position: relative;
+    width: fit-content;
 }
 .menulist li::after {
     
@@ -71,7 +74,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10%;
+    gap: 5%;
 }
 
 .header-icon{
@@ -100,4 +103,87 @@ header{
 }
 #button-probar:hover{
     box-shadow: 0px 0px 16px 4px #93ef51;
+}
+
+/*********************** MAIN ***********************/
+
+main{
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.main-section{
+    width: 100%;
+    margin: 1% 5%;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+
+.main-title{
+    width: 100%;
+    margin: 1% 5%;
+    background-color: purple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+
+.main-title h1 {
+    font-size: 250%;
+}
+
+.subtitles-carousel {
+    display: flex;
+    width: 50%;
+    background-color: bisque;
+    flex-direction: column;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+}
+
+.subtitles-carousel-marquee {
+    display: flex;
+    list-style: none;
+    white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
+    gap: 1rem;
+    overflow: hidden;
+    width: max-content; /* Cambia esto a max-content */
+}
+
+#subtitles-firstline, #subtitles-thirdline {
+    animation: moveRight 100s linear infinite; /* Mover hacia la derecha en bucle infinito */
+}
+
+#subtitles-secondline {
+    animation: moveLeft 40s linear infinite; /* Mover hacia la izquierda en bucle infinito */
+}
+
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(100%); /* Iniciar fuera del contenedor a la derecha */
+    }
+    100% {
+        transform: translateX(0%); /* Mover completamente a la izquierda del contenedor */
+    }
+    
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(-100%); /* Iniciar fuera del contenedor a la izquierda */
+    }
+    100% {
+        transform: translateX(100%); /* Mover completamente a la derecha del contenedor */
+    }
 }
