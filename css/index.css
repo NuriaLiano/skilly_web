@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Nunito';
+    src: url('../media/fonts/woff2/Nunito-Regular.woff2') format('woff2'),
+         url('../media/fonts/woff/Nunito-Regular.woff') format('woff');
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+:root{
+    --skilly-green: #7AC943; 
+    --marquee-li: #85ff2e38;
+}
 
 body{
     margin: 0;
@@ -10,10 +20,11 @@ body{
     font-weight: 600;
     font-size: 16px;
 }
-
-:root{
-    --skilly-green: #7AC943;
+::selection{
+    background-color: var(--marquee-li);
 }
+
+
 
 header{
     margin-top: 2%;
@@ -46,6 +57,10 @@ header{
 .menulist li{
     position: relative;
     width: fit-content;
+}
+.menulist li a{
+    text-decoration: none;
+    color: black;
 }
 .menulist li::after {
     
@@ -100,6 +115,7 @@ header{
     transition: box-shadow 0.3s ease-in-out; /* Agregar transición para suavizar el cambio */
     box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.75);
     font-weight: bold;
+    font-family: 'Nunito', sans-serif;
 }
 #button-probar:hover{
     box-shadow: 0px 0px 16px 4px #93ef51;
@@ -108,8 +124,8 @@ header{
 /*********************** MAIN ***********************/
 
 main{
+    height: 100vh;
     width: 100%;
-    background-color: blue;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -117,38 +133,55 @@ main{
     
 }
 .main-section{
+    margin-bottom: 10%;
     width: 100%;
-    margin: 1% 5%;
-    background-color: red;
+    height: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;   
+    justify-content: center;
+    gap: 5%;   
 }
 
 .main-title{
+    margin-bottom: 2%;
     width: 100%;
-    margin: 1% 5%;
-    background-color: purple;
+    height: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;   
+    justify-content: center;
+    gap: 25%;   
+}
+.main-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+}
+.main-text h1 {
+    font-family: nunito;
+    font-size: 450%;
+    font-weight: 500;
+    margin: 0;
 }
 
-.main-title h1 {
-    font-size: 250%;
+.main-text h1:nth-child(1){
+    margin-bottom: 1%;
 }
+
 
 .subtitles-carousel {
     display: flex;
     width: 50%;
-    background-color: bisque;
+    height: 90px;
     flex-direction: column;
     overflow: hidden;
     flex-direction: column;
     justify-content: center; /* Centrar verticalmente */
-    align-items: center; /* Centrar horizontalmente */
+    gap: 10%;
+    
 }
 
 .subtitles-carousel-marquee {
@@ -158,32 +191,92 @@ main{
     gap: 1rem;
     overflow: hidden;
     width: max-content; /* Cambia esto a max-content */
+    animation: moveRight 220s linear infinite;
 }
 
-#subtitles-firstline, #subtitles-thirdline {
-    animation: moveRight 100s linear infinite; /* Mover hacia la derecha en bucle infinito */
+.subtitles-carousel-marquee li{
+    background-color: var(--marquee-li);
+    border-radius: 5px;
 }
+
 
 #subtitles-secondline {
-    animation: moveLeft 40s linear infinite; /* Mover hacia la izquierda en bucle infinito */
+    animation: moveLeft 220s linear infinite; /* Mover hacia la izquierda en bucle infinito */
 }
 
-
+/*si va muy rapido es por que tiene que mostrar todo el texto en x segundos, a mas texto y menos segundos más rápido irá*/
 @keyframes moveRight {
     0% {
-        transform: translateX(100%); /* Iniciar fuera del contenedor a la derecha */
+        transform: translateX(10%); /* Iniciar fuera del contenedor a la derecha */
     }
     100% {
-        transform: translateX(0%); /* Mover completamente a la izquierda del contenedor */
+        transform: translateX(-100%); /* Mover completamente a la izquierda del contenedor */
     }
     
 }
 
 @keyframes moveLeft {
     0% {
-        transform: translateX(-100%); /* Iniciar fuera del contenedor a la izquierda */
+        transform: translateX(0%); /* Iniciar fuera del contenedor a la izquierda */
     }
     100% {
         transform: translateX(100%); /* Mover completamente a la derecha del contenedor */
     }
 }
+
+.main-btns{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+.main-btns > button > a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+}
+.btn-general{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--skilly-green);
+    border-radius: 15px;
+    width: 20%;
+    height: 60px;
+    padding: 5px;
+    border: 2px solid transparent; /* Borde inicialmente transparente */
+    transition: box-shadow 0.3s ease-in-out; /* Agregar transición para suavizar el cambio */
+    box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.75);
+    font-family: 'Nunito', sans-serif;
+}
+.btn-general:hover{
+    box-shadow: 0px 0px 16px 4px #93ef51;
+}
+#arrow-down {
+    position: absolute;
+    bottom: 50px; /* Ajusta la distancia desde abajo */
+    left: 50%; /* Coloca la imagen en el centro horizontalmente */
+    transform: translateX(-50%); /* Centra horizontalmente la imagen */
+    width: 40px; /* Ajusta el ancho de la imagen */
+    height: 40px; /* Ajusta la altura de la imagen */
+    opacity: 0.8;
+    animation: moveDown 2s infinite alternate; /* Animación para mover hacia abajo */
+}
+@keyframes moveDown {
+    0% {
+        transform: translateX(-50%) translateY(0); /* Posición inicial */
+    }
+    100% {
+        transform: translateX(-50%) translateY(20px); /* Posición final (20px hacia abajo) */
+    }
+}
+
+/******* METHODOLOGY **********/
+.methodology-section{
+    color: white;
+    background-color: black;
+    width: 100%;
+}
+
