@@ -7,6 +7,7 @@
 :root{
     --skilly-green: #7AC943; 
     --marquee-li: #85ff2e38;
+    --dark-back: #222222;
 }
 
 body{
@@ -27,12 +28,11 @@ body{
 
 
 header{
-    margin-top: 2%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%;
-    /* height: 100px; */
+    width: 100%;
+    height: 20vh;
 }
 .logo-container, .menu-container, .contact-menu-container{
     display: flex;
@@ -41,6 +41,7 @@ header{
 }
 .logo-container{
     width: 15%;
+    margin-left: 5%;
 }
 .logo-container a{
     display: inline-block;
@@ -77,10 +78,6 @@ header{
 
 .menulist li:hover::after {
     width: 98%; /* Ancho de la barra al pasar el cursor */
-}
-.contact-menu-container{
-    margin-left: auto;
-    width: 25%;
 }
 
 .header-list{
@@ -124,7 +121,7 @@ header{
 /*********************** MAIN ***********************/
 
 main{
-    height: 100vh;
+    height: 150vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -133,25 +130,24 @@ main{
     
 }
 .main-section{
-    margin-bottom: 10%;
     width: 100%;
-    height: 70%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 5%;   
+    justify-content: space-between;
+    gap: 5%;
+    flex-wrap: nowrap; 
 }
 
 .main-title{
-    margin-bottom: 2%;
     width: 100%;
     height: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 25%;   
+    gap: 10%;   
 }
 .main-text{
     display: flex;
@@ -201,7 +197,7 @@ main{
 
 
 #subtitles-secondline {
-    animation: moveLeft 220s linear infinite; /* Mover hacia la izquierda en bucle infinito */
+    animation: moveLeft 290s linear infinite; /* Mover hacia la izquierda en bucle infinito */
 }
 
 /*si va muy rapido es por que tiene que mostrar todo el texto en x segundos, a mas texto y menos segundos más rápido irá*/
@@ -217,7 +213,7 @@ main{
 
 @keyframes moveLeft {
     0% {
-        transform: translateX(0%); /* Iniciar fuera del contenedor a la izquierda */
+        transform: translateX(-80%); /* Iniciar fuera del contenedor a la izquierda */
     }
     100% {
         transform: translateX(100%); /* Mover completamente a la derecha del contenedor */
@@ -276,7 +272,65 @@ main{
 /******* METHODOLOGY **********/
 .methodology-section{
     color: white;
-    background-color: black;
+    background-color: var(--dark-back);
     width: 100%;
+    height: 100vh;
 }
 
+
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .timeline-point {
+    text-align: center;
+    flex: 1;
+    position: relative;
+  }
+  
+  .point-number {
+    background-color: var(--skilly-green);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+  }
+  
+  .timeline-point p {
+    margin: 0;
+  }
+  
+  .timeline-point::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--skilly-green);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .timeline-point::after {
+    content: "";
+    width: calc(100% - 30px); /* El ancho de la línea es igual al ancho del contenedor menos el ancho del punto */
+    height: 2px;
+    background-color: white; /* Línea blanca */
+    position: absolute;
+    top: 50%;
+    left: 30px; /* Dejar espacio para el punto */
+    z-index: -1;
+  }
+
+  .timeline-point:first-child::before {
+    display: none;
+  }
