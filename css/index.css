@@ -13,10 +13,6 @@
 body{
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 16px;
@@ -24,7 +20,42 @@ body{
 ::selection{
     background-color: var(--marquee-li);
 }
+.markedText, #motto{
+    color: var(--skilly-green);
+}
+#motto{
+    font-size: 20px;
+}
 
+.sectionTitle {
+    position: relative;
+    display: inline-block;
+    font-size: 180%;
+}
+
+.sectionTitle::before,
+.sectionTitle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 90%; /* Puedes ajustar el ancho si lo consideras necesario */
+    height: 3px;
+    border-radius: 3px;
+    background-color: var(--skilly-green);
+    transform: translateY(-50%);
+}
+
+.sectionTitle::before {
+    left: -110%; /* Ajusta según la distancia que quieras entre la línea y el título */
+}
+
+.sectionTitle::after {
+    right: -110%;
+}
+
+.sectionTitle:hover{
+    color: var(--skilly-green);
+}
 
 
 header{
@@ -32,7 +63,7 @@ header{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 20vh;
+    height: 15vh;
 }
 .logo-container, .menu-container, .contact-menu-container{
     display: flex;
@@ -121,22 +152,17 @@ header{
 /*********************** MAIN ***********************/
 
 main{
-    height: 150vh;
+    height: 100vh;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
 }
+/*********************** MAIN SECTION ***********************/
 .main-section{
     width: 100%;
-    height: 80%;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap: 5%;
     flex-wrap: nowrap; 
 }
 
@@ -269,32 +295,88 @@ main{
     }
 }
 
-/******* METHODOLOGY **********/
-.methodology-section{
-    color: white;
-    background-color: var(--dark-back);
-    width: 100%;
-    height: 100vh;
+
+/******* ABOUT **********/
+.about, .howWorks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    margin-top: 2%;
+    
+}
+.about{
+    height: 60vh;
+    margin-top: 1%;
 }
 
+.about .aboutContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--dark-back);
+    gap: 10%;
+    height: 100%;
+}
+.about .textAbout{
+    width: 50%;
+}
+.about .textAbout p{
+    text-align: justify;
+}
+
+.about img{
+    width: 30%;
+    border-radius: 25px;
+}
+
+/******* HOWWORKS**********/
+.howWorks{
+    height: 40vh;
+}
+.howWorks p{
+    text-align: justify;
+    margin-bottom: -0.5%;
+    padding:0 2%;
+}
 
 
 .timeline {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
-  }
-  
-  .timeline-point {
+    width: 95%; 
+    gap: 2%;
+    margin-top: 3%;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    flex: 1;
-    position: relative;
-  }
-  
-  .point-number {
-    background-color: var(--skilly-green);
-    color: white;
+    width: 100%;
+    height: 90%;
+    padding: 1%;
+    border-radius: 25px;
+    box-shadow: 0px 0px 50px -3px #000;
+}
+
+.timeline-item-text {
+    text-align: justify;
+    width: 100%;
+}
+.timeline-item-text a{
+    color: black;
+    font-size: bold;
+}
+
+.point-number {
+    background-color: white;
+    color: var(--skilly-green);
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -302,35 +384,17 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 10px;
-  }
-  
-  .timeline-point p {
-    margin: 0;
-  }
-  
-  .timeline-point::before {
-    content: "";
-    width: 100%;
-    height: 2px;
-    background-color: var(--skilly-green);
-    position: absolute;
-    top: 50%;
-    left: 0;
-    z-index: -1;
-  }
-  
-  .timeline-point::after {
-    content: "";
-    width: calc(100% - 30px); /* El ancho de la línea es igual al ancho del contenedor menos el ancho del punto */
-    height: 2px;
-    background-color: white; /* Línea blanca */
-    position: absolute;
-    top: 50%;
-    left: 30px; /* Dejar espacio para el punto */
-    z-index: -1;
-  }
+}
+#first{
+    background-color: #D0F1B9;
+}
+#second{
+    background-color: #B1E68C;
+}
+#third{
+    background-color: #90D85D;
+}
+#fourth{
+    background-color: #7AC943;
+}
 
-  .timeline-point:first-child::before {
-    display: none;
-  }
