@@ -1,159 +1,9 @@
-@font-face {
-    font-family: 'Nunito';
-    src: url('../media/fonts/woff2/Nunito-Regular.woff2') format('woff2'),
-         url('../media/fonts/woff/Nunito-Regular.woff') format('woff');
-}
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
-:root{
-    --skilly-green: #7AC943; 
-    --marquee-li: #85ff2e38;
-    --dark-back: #222222;
-}
-
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-}
-::selection{
-    background-color: var(--marquee-li);
-}
-.markedText, #motto{
-    color: var(--skilly-green);
-}
-#motto{
-    font-size: 20px;
-}
-
-.sectionTitle {
-    position: relative;
-    display: inline-block;
-    font-size: 180%;
-}
-
-.sectionTitle::before,
-.sectionTitle::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 90%; /* Puedes ajustar el ancho si lo consideras necesario */
-    height: 3px;
-    border-radius: 3px;
-    background-color: var(--skilly-green);
-    transform: translateY(-50%);
-}
-
-.sectionTitle::before {
-    left: -110%; /* Ajusta según la distancia que quieras entre la línea y el título */
-}
-
-.sectionTitle::after {
-    right: -110%;
-}
-
-.sectionTitle:hover{
-    color: var(--skilly-green);
-}
-
-
-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 15vh;
-}
-.logo-container, .menu-container, .contact-menu-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.logo-container{
-    width: 15%;
-    margin-left: 5%;
-}
-.logo-container a{
-    display: inline-block;
-}
-.logo-container img{
-    width: 100%;
-}
-.menu-container{
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.menulist li{
-    position: relative;
-    width: fit-content;
-}
-.menulist li a{
-    text-decoration: none;
-    color: black;
-}
-.menulist li::after {
-    
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px; /* Grosor de la barra */
-    background-color: var(--skilly-green); /* Color de la barra */
-    position: absolute;
-    bottom: -50%;
-    left: 0;
-    transition: width 0.3s ease-in-out; /* Transición suave de la anchura */
-}
-
-.menulist li:hover::after {
-    width: 98%; /* Ancho de la barra al pasar el cursor */
-}
-
-.header-list{
-    width: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5%;
-}
-
-.header-icon{
-    width: 25%;
-    display: flex;
-    gap: 20%;
-}
-.header-icon a{
-    display: inline-block;
-}
-.header-icon img{
-    width: 100%;
-}
-#button-probar{
-    display: flex;
-    align-items: center;
-    background-color: var(--skilly-green);
-    border-radius: 15px;
-    width: fit-content;
-    height: 50px;
-    padding: 5px;
-    border: 2px solid transparent; /* Borde inicialmente transparente */
-    transition: box-shadow 0.3s ease-in-out; /* Agregar transición para suavizar el cambio */
-    box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.75);
-    font-weight: bold;
-    font-family: 'Nunito', sans-serif;
-}
-#button-probar:hover{
-    box-shadow: 0px 0px 16px 4px #93ef51;
-}
 
 /*********************** MAIN ***********************/
 
 main{
-    height: 100vh;
     width: 100%;
+    margin-bottom: 1%;
 }
 /*********************** MAIN SECTION ***********************/
 .main-section{
@@ -297,7 +147,7 @@ main{
 
 
 /******* ABOUT **********/
-.about, .howWorks{
+.about, .howWorks, .whereClasses, .contactForm, .plans{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -385,7 +235,7 @@ main{
     align-items: center;
     justify-content: center;
 }
-#first{
+/* #first{
     background-color: #D0F1B9;
 }
 #second{
@@ -396,5 +246,207 @@ main{
 }
 #fourth{
     background-color: #7AC943;
+} */
+#first{
+    background-color: #e3f5d2;
+}
+#second{
+    background-color: #c7ecaa;
+}
+#third{
+    background-color: #a3dd79;
+}
+#fourth{
+    background-color: #7ac943;
+}
+/******* WHERECLASSES **********/
+.whereClasses{
+    height: 80vh;
+}
+.features{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+.features p{
+    text-align: justify;
 }
 
+/******* PLANS **********/
+.plans{
+    height: 100vh;
+    gap: 5%;
+}
+.plans .plansWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    width: 100%;
+    height: 60%;
+    background-color: var(--dark-back);
+    padding: 2% 0;
+}
+.plans .plansWrapper .plan{
+    
+    background-color: white;
+    width: 20%;
+    height: 90%;
+    border-radius: 25px;
+    padding: 1%;
+}
+.plans .plansWrapper .plan .planTitle, .plans .plansWrapper .plan .planPrice{
+    text-align: center;
+}
+
+.plans .plansWrapper .plan .planPrice{
+    color: rgb(100, 99, 99);
+    font-size: 80%;
+}
+.plans .plansWrapper .plan .planPrice .price{
+    font-size: 500%;
+    color: var(--skilly-green);
+}
+
+.plans .plansWrapper .plan .planContent ul{
+    list-style: none;
+    text-align: left;
+    padding-left: 0;
+}
+
+#btn-plans, #btn-contact {
+    text-decoration: none;
+    color: black;
+    font-size: 130%;
+    font-weight: 700;
+    width: 15%;
+}
+
+/******* CONTACTFORM**********/
+.contactForm{
+    height: 90%;
+}
+.form-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.form-container form{
+    height: 60%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 2%;
+}
+.form-container form .input-field{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15%;
+    height: 50%;
+
+}
+.form-container form .input-field input[type="text"], .form-container form .input-field input[type="email"], .form-container form .input-field textarea{
+    width: 30%;
+    height: 40px;
+    border: none;
+    color: black;
+    border-radius: 10px;
+    border: 2px solid var(--skilly-green);
+}
+.form-container form .input-field input[type="text"]::placeholder, .form-container form .input-field input[type="email"]::placeholder, .form-container form .input-field textarea::placeholder{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.form-container form .input-field input[type="text"]:hover, .form-container form .input-field input[type="email"]:hover, .form-container form .input-field textarea:hover{
+    background-color: #B1E68C;
+}
+
+.form-container form .input-field label{
+    width: 50%;
+}
+
+#btn-contact{
+    width: 20%;
+    font-size: 120%;
+    margin-top: 5%;
+}
+.whatsapp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.whatsapp img{
+    width: 50%;
+}
+#imgW{
+    width: 70%;
+}
+
+
+/******* FOOTER **********/
+
+footer{
+    box-shadow: 0px -16px 10px -8px rgba(0,0,0,0.1);
+    background-color: var(--dark-back);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 30vh;
+    gap: 2%;
+    color: white;
+}
+footer img{
+    width: 8%;
+}
+
+footer .footer-list{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 5%;
+    width: 60%;
+    justify-content: center;
+    align-items:center;
+}
+footer .footer-list a{
+    text-decoration: none;
+    color: white;
+}
+
+footer .footer-list a:hover{
+    color: var(--skilly-green);
+}
+footer #footer-legal a{
+    color: rgb(100, 99, 99);
+}
+
+/******* FOOTER **********/
+
+#to-top-button {
+    position: fixed; /* Fija el botón en una posición en la pantalla */
+    bottom: 20px; /* 20px desde la parte inferior */
+    right: 20px; /* 20px desde la parte derecha */
+    padding: 10px 15px; /* Espaciado interno para el botón */
+    background-color: var(--skilly-green); /* Color de fondo */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Remueve el subrayado del texto */
+    border-radius: 50%; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de la fuente */
+    z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+}
+
+#to-top-button:hover {
+    filter: brightness(85%); /* Efecto al pasar el cursor por encima */
+}

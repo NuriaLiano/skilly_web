@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skilly - Academia online 🖥📚 </title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/global.css">
     <link rel="icon" href="media/icons/ico_skilly.ico" type="image/x-icon">
 </head>
 <body>
@@ -16,21 +17,21 @@
         </section>
         <section class="menu-container">
             <ul class="header-list menulist">
-                <li><a href="#alumnos" target="_blank" rel="noopener noreferrer">Alumnos { 👩‍🎓 }</a></li>
-                <li><a href="#trabajos" target="_blank" rel="noopener noreferrer">TFG - TFM - Proyectos { 📝 } </a></li>
-                <li><a href="#profes" target="_blank" rel="noopener noreferrer">Apoyo a profes { 👩‍🏫 }</a></li>
-                <li><a href="#cursos" target="_blank" rel="noopener noreferrer">Cursos { 📚 }</a></li>
+                <li><a href="alumnos.html" target="_blank" rel="noopener noreferrer">Alumnos { 👩‍🎓 }</a></li>
+                <li><a href="proyectos.html" target="_blank" rel="noopener noreferrer">TFG - TFM - Proyectos { 📝 } </a></li>
+                <li><a href="profes.html" target="_blank" rel="noopener noreferrer">Apoyo a profes { 👩‍🏫 }</a></li>
+                <li><a href="cursos.html" target="_blank" rel="noopener noreferrer">Cursos { 📚 }</a></li>
             </ul>
         </section>
         <section class="contact-menu-container">
             <ul class="header-list">
-                <li id="button-probar">¡Quiero probar!</li>
+                <li class="button-probar"><a href="#link-contact">¡Quiero probar!</a></li>
                 <li class="header-icon">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <!-- <a href="https://calendar.google.com/calendar/u/0?cid=NWIzbjlxZ2cxZGh1aTg2bDBvNTMwcXNsaDBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ" target="_blank" rel="noopener noreferrer">
                         <img src="media/icons/calendar.svg" alt="icono de calendario con enlace al calendario">
-                    </a>
-                    <a href="http://wa.me/+34662342621" target="_blank" rel="noopener noreferrer">
-                        <img src="media/icons/wa.svg" alt="icono de whatsapp">
+                    </a> -->
+                    <a href="http://wa.me/+34662342621" target="_blank" rel="noopener noreferrer" >
+                        <img src="media/icons/wa.svg" alt="icono de whatsapp" id="imgW">
                     </a>
                 </li>
             </ul>
@@ -94,7 +95,7 @@
                         <li>Clases de refuerzo</li>
                         <li>Documentación personalizada</li>
                         <li>Ejercicios tipo</li>
-                        <li>"Modo Historia"</li>
+                        <li>Modo Historia&trade;</li>
                         <li>Simulacros de examenes</li>
                         <li>Simulacros de entrevistas</li>
                         <li>Exámenes de autoevaluación</li>
@@ -112,17 +113,17 @@
                 </div>
             </div>
             <div class="main-btns">
-                <button class="btn-general"><a href="">Ver los planes</a></button>
-                <button class="btn-general"><a href="">Conoce más</a></button>
+                <button class="btn-general"><a href="#link-plans">Ver los planes</a></button>
+                <button class="btn-general"><a href="#link-how">Conoce más</a></button>
             </div>
             <a href=""><img src="media/img/arrow-down.svg" alt="" id="arrow-down"></a>
         </section>            
-        <section class="about">
+        <section class="about" id="link-about">
             <h1 class="sectionTitle">¿Qué es Skilly?</h1>
             <div class="aboutContent">
                 <div class="textAbout">
                     <p>Skilly es una forma diferente de aprender informática. Aquí no seguimos los típicos y terroríficos "powerpoints" ni esas explicaciones que duermen. En cambio, 
-                    seguimos nuestra propia metodología, <span class="markedText">"Modo Historia"</span> desarrollada a lo largo de <span class="markedText">¡10 años!</span>
+                    seguimos nuestra propia metodología, <span class="markedText">Modo Historia&trade;</span> desarrollada a lo largo de <span class="markedText">¡10 años!</span>
                     de experiencia tanto como profe como estudiante, y basada en el "feedback" y experiencias de nuestros alumnos.
                     Ofrecemos clases dinámicas, colaborativas, divertidas, centradas en aprender y comprender las bases de la técnologia.</p>
                     <p>Disponemos de una <span class="markedText">plataforma donde los alumnos encontrarán toda la documentación que necesiten</span>, adaptada a sus necesidades, 
@@ -137,7 +138,7 @@
                 <img src="media/img/img-about.jpg" alt=""> 
             </div>
         </section>
-        <section class="howWorks">
+        <section class="howWorks" id="link-how">
             <h1 class="sectionTitle">¿Cómo funciona?</h1>
             <p>En Skilly, sabemos que todos tienen un ritmo y nivel de aprendizaje distinto, 
                 por eso hemos desarrollado un sistema que se adapta a ti, haciendo el proceso sencillo y personalizado.</p>
@@ -149,17 +150,6 @@
                     <div class="timeline-item-text">
                     <p>Escríbenos por <a href="http://wa.me/+34662342621">WhatsApp</a> o a <a href="http://mailto:hola@skilly.es">través del correo.</a>
                     y explícanos con el mayor detalle posible que necesitas</p>
-                    <!-- <p>Puedes intentar responder a estas preguntas:</p>
-                        <ul>
-                            <li>¿Cómo te llamas?</li>
-                            <li>¿De dónde eres?</li>
-                            <li>¿Qué estás estudiando?</li>
-                            <li>¿Que tecnología o lenguaje quieres aprender?</li>
-                            <li>¿Cuál es tu nivel?</li>
-                            <li>¿Que horario tienes disponible para dar clases?</li>
-                            <li>¿Tienes algún requerimiento específico para tener en cuenta en las clases?</li>
-                            <li>¿Necesitas clases adaptadas por alguna condición (dislexia, discalculia, etc)?</li>
-                        </ul> -->
                 </div>
             </div>
             <div class="timeline-item" id="second">
@@ -184,24 +174,159 @@
                 </div>
             </div>
         </section>
-        <section class="whereClasses">
+        <section class="whereClasses" id="link-where">
             <h1 class="sectionTitle">¿Cómo son las clases?</h1>
-            <div class="caracteristics">
-                <p>Online</p>
-                <p>A tu ritmo</p>
-                <p>Personalizadas</p>
-                <p>Dinámicas</p>
-                <p>Modo Historia™</p>
-                <p>Whatsapp</p>
-            </div>                     
+            <p>Seguro que estás deseando saber cómo funciona, ¡Te lo contamos!</p>
+            <div class="features">
+                <p><span class="emoji">🏡</span> Aprende desde donde quieras, en tu casa, en la cafetería, con el ordenador o desde el móvil. <span class="featureMark">100% ONLINE</span></p>
+                <p><span class="emoji">💻</span> Elegimos <span class="featureMark">Discord</span> para nuestras clases ya que nos permite compartir pantalla, código y ficheros markdown de forma mucho más sencilla y sin límite de tiempo</p>
+                <p><span class="emoji">🧤</span> Experimenta un aprendizaje <span class="featureMark">adaptado a ti</span> con <span class="featureMark">clases dinámicas</span> y personalizadas.</p>
+                <p><span class="emoji">🤸🏼‍♀️</span> <span class="featureMark">Flexibilidad</span> total: nos ajustamos a tus horarios y necesidades.</p>
+                <p><span class="emoji">👩🏼‍💻</span> Con nuestra <span class="featureMark">metodología Modo Historia&trade;</span> vivirás la experiencia laboral a través de los ejercicios.</p>
+                <p><span class="emoji">📚</span> Accede a una plataforma exclusiva con <span class="featureMark">documentación propia</span>, directa y útil sobre una gran cantidad de tecnologías y lenguajes.</p>
+                <p><span class="emoji">📲</span> Resuelve tus <span class="featureMark">dudas a cualquier hora (24/7)</span> con nuestro canal de <span class="featureMark">Whatsapp.</span></p>
+            </div>                   
         </section>
-            <!--     <h2>¿Dónde damos las clases?</h2>
-            <h2>Metodología</h2>
-            </section>
-            -->
-            <!-- <h1>Seguro que estás deseando saber cómo funciona, ¡Te lo contamos!</h1>
-            -->
+        <section class="plans" id="link-plans">
+            <h1 class="sectionTitle">Planes</h1>
+            <div class="plansWrapper">
+                <div class="plan" id="teachers">
+                    <h2 class="planTitle">Profes</h2>
+                    <h3 class="planPrice"><span class="price">25</span>€/hora</h3>
+                    <div class="planContent">
+                        <ul>
+                            <li>📚 Acceso a la plataforma de documentación</li>
+                            <li>💻🥇 Contenido de calidad</li>
+                            <li>👩🏽‍🏫✌🏼 Clase con profes que son la caña</li>
+                            <li>📝 Preparación de exámenes y actividades para tus alumnos</li>
+                            <li>🪒 Infinidad de recursos online</li>
+                            <li>📲 Canal privado de Whatsapp 24/7</li>
+                            <li>🤸🏽‍♀️ Flexibilidad de horarios</li>
+                            <li>🛠 Soporte técnico para implementación de actividades</li>
+                            <li>👨🏽‍🏫✍🏽 Preparación de clases</li>
+                            <li>🚶🏽‍♀️ Tutoriales</li>
+                            <li>🧭 Cheatsheets</li>
+                            <li>📖 Ebooks / Recomendación lectora</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="plan" id="students">
+                    <h2 class="planTitle" >Alumnos</h2>
+                    <h3 class="planPrice"><span class="price">25</span>€/hora</h3>
+                    <div class="planContent">
+                        <ul>
+                            <li>👩🏽‍🏫✌🏼 Clase con profes que son la caña</li>
+                            <li>💻🥇 Contenido de calidad</li>
+                            <li>📝 Ejercicios y simulacros de examen</li>
+                            <li>🚀 Explicaciones prácticas y sin rodeos</li>
+                            <li>👩🏽‍🏫🏢 Metodología Modo Historia&trade;  </li>
+                            <li>🪒 Infinidad de recursos online</li>
+                            <li>📲 Canal privado de Whatsapp 24/7</li>
+                            <li>🤸🏽‍♀️ Flexibilidad de horarios</li>
+                            <li>🛠 Soporte técnico para implementación de actividades</li>
+                            <li>👨🏽‍💻 Simulacros de entrevista</li>
+                            <li>🚶🏽‍♀️ Tutoriales</li>
+                            <li>🧭 Cheatsheets</li>
+                            <li>📖 Ebooks / Recomendación lectora</li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="plan" id="proyects">
+                    <h2 class="planTitle" >Proyectos/TFG/TFM</h2>
+                    <h3 class="planPrice"><span class="price">30</span>€/hora</h3>
+                    <div class="planContent">
+                        <ul>
+                            <li>👩🏽‍🏫✌🏼 Tutorización con profes que son la caña</li>
+                            <li>💻🥇 Contenido de calidad</li>
+                            <li>🎯 Reuniones semanales</li>
+                            <li>🚀 Explicaciones molonas y sin rodeos sobre tu código</li>
+                            <li>👩🏽‍🏫🏢 Metodología Modo Historia&trade;</li>
+                            <li>🪒Infinidad de recursos online</li>
+                            <li>📲 Canal privado de Whatsapp 24/7</li>
+                            <li>🤸🏽‍♀️ Flexibilidad de horarios</li>
+                            <li>🛠 Soporte técnico para implementación del proyecto</li>
+                            <li>🚶🏽‍♀️ Tutoriales</li>
+                            <li>🧭 Cheatsheets</li>
+                            <li>📖 Ebooks / Recomendación lectora</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+                <a href="#link-contact" class="btn-general" id="btn-plans">¡ME APUNTO!</a>
+        </section>
+        <section class="contactForm" id="link-contact">
+            <h1 class="sectionTitle">¿Hablamos?</h1>
+            <p>¡Escríbenos y nos pondremos en contacto!</p>
+                <div class="form-container">
+                    <form action="">
+                        <div class="input-field">
+                            <label for="name">¿Cómo te llamas?</label>
+                            <input type="text" name="name" id="name" placeholder="Nombre">
+                        </div>
+                        <div class="input-field">
+                            <label for="email">¿Cuál es tu correo?</label>
+                            <input type="email" name="email" id="email" placeholder="Correo">
+                        </div>
+                        <div class="input-field">
+                            <label for="phone">¿Cuál es tu teléfono?</label>
+                            <input type="text" name="phone" id="phone" placeholder="Telefono">
+                        </div>
+                        <div class="input-field">
+                          <label for="estudios">¿Qué estás estudiando?</label>
+                            <input type="text" name="estudios" id="estudios" placeholder="Estudios">  
+                        </div>
+                        <div class="input-field">
+                            <label for="lenguaje">¿Que tecnología, lenguaje o rol quieres aprender?</label>
+                            <input type="text" name="lenguaje" id="lenguaje" placeholder="Lenguaje">
+                        </div>
+                        <div class="input-field">
+                            <label for="nivel">¿Qué base tienes?</label>
+                            <input type="text" name="nivel" id="nivel" placeholder="Nivel">
+                        </div>
+                        <div class="input-field">
+                            <label for="horario">¿Cuál es tu horario disponible?</label>
+                            <input type="text" name="horario" id="horario" placeholder="Horario">
+                        </div>
+                        <div class="input-field">
+                            <label for="requerimientos">¿Tienes algún requerimiento para tener en cuenta?</label>
+                            <input type="text" name="requerimientos" id="requerimientos" placeholder="Requerimientos">
+                        </div>
+                        <div class="input-field">
+                            <label for="adaptadas">¿Necesitas clases adaptadas por alguna condición (dislexia, discalculia, etc)?</label>
+                            <input type="text" name="adaptadas" id="adaptadas" placeholder="Clases adaptadas">
+                        </div>
+                        <div class="input-field">
+                            <label for="libertad">Siéntete libre de contarnos lo que creas necesario </label>
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Cuéntanos más si es necesario"></textarea>
+                        </div>
+                        <div class="input-field">
+                            <input type="submit" value="Enviar" class="btn-general" id="btn-contact">
+                            <a href="http://wa.me/+34662342621" target="_blank" rel="noopener noreferrer" class="whatsapp">
+                                <img src="media/icons/wa.svg" alt="icono de whatsapp">
+                            </a>
+                        </div>                       
+                    </form>
+                </div>
+        </section>
     </main>
-                                    
+    <footer>
+        <img src="media/img/7AC943_white_transparent.png" alt="logo_skilly">
+        <ul class="footer-list" id="footer-menu">
+            <li><a href="alumnos.html">Alumnos</a></li>
+            <li><a href="proyectos.html">TFG - TFM - Proyectos</a></li>
+            <li><a href="profes.html">Apoyo a profes</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+        </ul>
+        <ul class="footer-list" id="footer-legal">
+            <li><a href="#">Aviso legal</a></li>
+            <li><a href="#">Condiciones generales</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Política de cookies</a></li>
+            <li><a href="#">Política de cancelación</a></li>
+        </ul>
+        <p>Desde Cantabria con mucho 💚</p>
+    </footer>
+    <a href="#top" id="to-top-button">↑</a>                               
 </body>
 </html>

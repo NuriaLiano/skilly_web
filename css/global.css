@@ -1,0 +1,233 @@
+@font-face {
+    font-family: 'Nunito';
+    src: url('../media/fonts/woff2/Nunito-Regular.woff2') format('woff2'),
+         url('../media/fonts/woff/Nunito-Regular.woff') format('woff');
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+:root{
+    --skilly-green: #7AC943; 
+    --marquee-li: #85ff2e38;
+    --dark-back: #222222;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+::selection{
+    background-color: var(--marquee-li);
+}
+.markedText, #motto{
+    color: var(--skilly-green);
+}
+#motto{
+    font-size: 20px;
+}
+.emoji{
+    font-size: 30px;
+}
+
+.featureMark{
+    color: var(--skilly-green);
+    font-size: 150%;
+    display: inline-block; /* Para asegurar que la rotación funcione en elementos en línea */
+    transition: transform 0.5s; /* Añadir una transición suave al efecto */
+}
+.featureMark:hover{
+    background-color: var(--skilly-green);
+    color: black;
+    transform: scale(1.2) rotate(-4deg);; /* Rotar el elemento 10 grados al pasar el cursor */
+    border-radius: 5px;
+}
+
+.sectionTitle {
+    position: relative;
+    display: inline-block;
+    font-size: 180%;
+}
+
+.sectionTitle::before,
+.sectionTitle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 90%; /* Puedes ajustar el ancho si lo consideras necesario */
+    height: 3px;
+    border-radius: 3px;
+    background-color: var(--skilly-green);
+    transform: translateY(-50%);
+}
+
+.sectionTitle::before {
+    left: -110%; /* Ajusta según la distancia que quieras entre la línea y el título */
+}
+
+.sectionTitle::after {
+    right: -110%;
+}
+
+.sectionTitle:hover{
+    color: var(--skilly-green);
+}
+
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15vh;
+}
+.logo-container, .menu-container, .contact-menu-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-container{
+    width: 15%;
+    margin-left: 5%;
+}
+.logo-container a{
+    display: inline-block;
+}
+.logo-container img{
+    width: 100%;
+}
+.menu-container{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menulist li{
+    position: relative;
+    width: fit-content;
+}
+.menulist li a{
+    text-decoration: none;
+    color: black;
+}
+.menulist li::after {
+    
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px; /* Grosor de la barra */
+    background-color: var(--skilly-green); /* Color de la barra */
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    transition: width 0.3s ease-in-out; /* Transición suave de la anchura */
+}
+
+.menulist li:hover::after {
+    width: 98%; /* Ancho de la barra al pasar el cursor */
+}
+
+.header-list{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+.header-icon{
+    width: 25%;
+    display: flex;
+    gap: 20%;
+}
+.header-icon a{
+    display: inline-block;
+}
+.header-icon img{
+    width: 100%;
+}
+.button-probar{
+    display: flex;
+    align-items: center;
+    background-color: var(--skilly-green);
+    border-radius: 15px;
+    width: fit-content;
+    height: 50px;
+    padding: 5px;
+    border: 2px solid transparent; /* Borde inicialmente transparente */
+    transition: box-shadow 0.3s ease-in-out; /* Agregar transición para suavizar el cambio */
+    box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.75);
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+}
+.button-probar a{
+    text-decoration: none;
+    color: black;
+}
+.button-probar:hover{
+    box-shadow: 0px 0px 16px 4px #93ef51;
+}
+
+.navText{
+    text-align: center;
+}
+
+/******* FOOTER **********/
+
+footer{
+    box-shadow: 0px -16px 10px -8px rgba(0,0,0,0.1);
+    background-color: var(--dark-back);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 30vh;
+    gap: 2%;
+    color: white;
+}
+footer img{
+    width: 8%;
+}
+
+footer .footer-list{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 5%;
+    width: 60%;
+    justify-content: center;
+    align-items:center;
+}
+footer .footer-list a{
+    text-decoration: none;
+    color: white;
+}
+
+footer .footer-list a:hover{
+    color: var(--skilly-green);
+}
+footer #footer-legal a{
+    color: rgb(100, 99, 99);
+}
+
+/******* FOOTER **********/
+
+#to-top-button {
+    position: fixed; /* Fija el botón en una posición en la pantalla */
+    bottom: 20px; /* 20px desde la parte inferior */
+    right: 20px; /* 20px desde la parte derecha */
+    padding: 10px 15px; /* Espaciado interno para el botón */
+    background-color: var(--skilly-green); /* Color de fondo */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Remueve el subrayado del texto */
+    border-radius: 50%; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de la fuente */
+    z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+}
+
+#to-top-button:hover {
+    filter: brightness(85%); /* Efecto al pasar el cursor por encima */
+}
