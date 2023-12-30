@@ -165,10 +165,10 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
     background-color: var(--dark-back);
     gap: 10%;
     height: 100%;
+    color: white;
 }
 .about .textAbout{
     width: 50%;

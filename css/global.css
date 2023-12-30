@@ -7,6 +7,10 @@
 :root{
     --skilly-green: #7AC943; 
     --marquee-li: #85ff2e38;
+    --discord: #5865F2;
+    --whatsapp: #14c426;
+    --documentation: #18c4e2;
+    --calendar: #7AC943;
     --dark-back: #222222;
 }
 html{
@@ -141,7 +145,10 @@ header{
 .header-icon{
     width: 25%;
     display: flex;
-    gap: 20%;
+    gap: 10%;
+}
+.header-icon #imgW{
+    width: 120%;
 }
 .header-icon a{
     display: inline-block;

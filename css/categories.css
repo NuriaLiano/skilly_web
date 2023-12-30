@@ -1,0 +1,113 @@
+.triple-b{
+    font-size: 12px;
+}
+.explain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.text-explain{
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    padding: 0 10%;
+}
+
+.img-explain{
+    width: 30%;
+}
+
+.text-explain-marked{
+    color: var(--skilly-green);
+    font-weight: bold;
+}
+
+.utilities{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10%;
+}
+
+.utilities .cardsUtilities{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5%;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.utilities .cardsUtilities .utility {
+    width: 40%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+    /* TODO: nose si ponerlo center o justify */
+    text-align: center; 
+
+}
+
+#annotation{
+    font-style: italic;
+    color: #e7e7e7;
+    font-size: 10px;
+}
+
+.titleUtilitiesMarked{
+    display: inline-block; /* Para asegurar que la rotación funcione en elementos en línea */
+    transition: transform 0.5s; /* Añadir una transición suave al efecto */
+}
+.titleUtilitiesMarked:hover{
+    transform: scale(1.2) rotate(-4deg);; /* Rotar el elemento 10 grados al pasar el cursor */
+    border-radius: 5px;
+}
+
+#titleDiscord{
+    color: var(--discord);
+   
+}
+#titleDiscord:hover{
+    background-color: var(--discord);
+    color: black;
+    
+}
+
+#titleWhatsapp{
+    color: var(--whatsapp);
+}
+
+#titleWhatsapp:hover{
+    background-color: var(--whatsapp);
+    color: black;
+}
+
+#titleDocu{
+    color: var(--documentation);
+}
+
+#titleDocu:hover{
+    background-color: var(--documentation);
+    color: black;
+}
+
+#titleCal{
+    color: var(--calendar);
+}
+
+#titleCal:hover{
+    background-color: var(--calendar);
+    color: black;
+}
+
+
+
+.utilities .cardsUtilities .utility img{
+    width: 100%;
+}
